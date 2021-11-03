@@ -44,4 +44,5 @@ ggplot(pdat3, aes(x,y, colour = r, size = -log10(p))) +
                         mid = 'white',
                         high = 'red',
                         midpoint = 0) +
-  scale_size_area() + theme_bw()
+  scale_size_area() + theme_bw() +
+  theme(axis.text.x = element_text(angle = 90))
