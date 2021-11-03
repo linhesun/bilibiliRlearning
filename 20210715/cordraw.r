@@ -29,3 +29,19 @@ pheatmap(pdat2, cellwidth = 15, cellheight = 15,
          color = mycol,
          legend_breaks = seq(-1,1,by = 0.2),
          breaks = bk)
+
+pdat3 <- data.frame(x = rep(colnames(pdat2), each = 23),
+                       y = rep(rownames(pdat2), 13),
+                       r = as.vector(res$r),
+                       p = as.vector(
+                         ifelse(res$p.adj >= 0.05, 1, res$p.adj)
+                       ))
+
+library(ggplot2)
+ggplot(pdat3, aes(x,y, colour = r, size = -log10(p))) +
+  geom_point(aes(alpha = -log10(p))) + 
+  scale_color_gradient2(low = 'blue',
+                        mid = 'white',
+                        high = 'red',
+                        midpoint = 0) +
+  scale_size_area() + theme_bw()
