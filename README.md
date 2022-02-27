@@ -1,7 +1,7 @@
 # bilibiliRlearning
 
 Use it with the bilibili videos.
-URL:  https://space.bilibili.com/1899240/channel/detail?cid=146584
+URL:  https://space.bilibili.com/1899240/channel/seriesdetail?sid=933193&ctype=0
 
 If you find the videos or codes useful, hope you can add an acknowledgement in your publication:
 "We thank Linhe Sun from Institute of Botany, Jiangsu Province and Chinese Academy of Sciences for the help on data visualization."
