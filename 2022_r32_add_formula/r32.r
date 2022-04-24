@@ -21,8 +21,8 @@ ggplot(mpg,aes(cty, hwy, color = drv)) + geom_point() +
 ggplot(mpg,aes(cty, hwy)) + geom_point() +
   stat_poly_line(formula = y ~ x, se = FALSE) +
   theme_bw() + 
-  stat_poly_eq(aes(label = paste(..eq.label..,'\",\"', ..adj.rr.label.., '\", p =\"', ..p.value.., sep = '*\" \"*')), 
-               formula = y ~ x, parse = T, label.y = "top", label.x = "left")
+  stat_poly_eq(aes(label = paste(..eq.label..,'\", \"' , ..adj.rr.label..,'\", \"*italic(P)~`=`~\" \"', ..p.value.., sep = '*\" \"*')),
+               formula = y ~ x, parse = T, label.y = 'bottom', label.x = 'right')
 
 
 
