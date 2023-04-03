@@ -11,7 +11,7 @@ str(spe.h.pc)#记录一二轴解释率“Eigenvalues”
 spe.h.pcoa <- spe.h.pc$vectors
 
 spe.pcoa <- data.frame(spe.h.pcoa[,1:2]) %>%
-  mutate(Types = rep(c('Hv', 'MV'), each = 6),
+  mutate(Types = rep(c('A', 'B'), each = 6),
          Treatments = rep(rep(c('CK', 'P'), each = 3), 2))
 # 置换多元方差分析
 spe <- bray.dist
