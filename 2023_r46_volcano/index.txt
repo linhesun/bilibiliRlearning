@@ -1,0 +1,5 @@
+gene_id	gene_name
+gene_4560	Qing1
+gene_120	Qing2
+gene_2294	Qing3
+gene_6578	Qing4
