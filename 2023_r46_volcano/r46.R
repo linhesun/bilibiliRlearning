@@ -5,6 +5,7 @@ dat <- read_tsv('trans_sample.txt')
 dat2 <- dat
 dat2$regulate <- ifelse(dat2$log2FoldChange >= 0, 'up', 'down')
 dat2$regulate[dat2$padj > 0.05] = 'no'
+dat2$regulate[abs(dat2$log2FoldChange) < 1] <- 'no' 
 dat2$regulate <- factor(dat2$regulate, levels = c('up', 'down', 'no'))
 dat2$target <- dat2$gene_id
 dat2$target[abs(dat2$log2FoldChange) < 5| dat2$padj > 0.05] <- NA
